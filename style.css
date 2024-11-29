@@ -1,0 +1,166 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the footer stays at the bottom */
+}
+
+/* Links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-bottom: 2px solid #ddd;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5em;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Resume Page Styles */
+.resume {
+  background: #f4f4f4;
+  padding: 20px;
+  flex: 1;
+  background-image: url(./bg-home-office-city.jpg);
+}
+
+.resume-section {
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+/* Education Table Styles */
+table.tableclass {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table.tableclass th,
+table.tableclass td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+table.tableclass th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table.tableclass tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.tableclass tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design for Table (Row-wise Layout on Small Screens) */
+@media (max-width: 768px) {
+  table.tableclass {
+    display: block; /* Table becomes block */
+  }
+
+  table.tableclass thead {
+    display: none; /* Hide table header */
+  }
+
+  table.tableclass tr {
+    display: block; /* Each row becomes a block */
+    margin-bottom: 15px; /* Add spacing between rows */
+    border: 1px solid #ddd;
+    padding: 10px; /* Add padding for clarity */
+  }
+
+  table.tableclass td {
+    display: block; /* Each cell becomes a block */
+    text-align: left; /* Align text to the left */
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none; /* Remove inner borders for clarity */
+  }
+
+  table.tableclass td:before {
+    content: attr(data-label); /* Use data-label attribute for labels */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  table.tableclass tr {
+    margin-bottom: 10px; /* Reduce spacing for smaller screens */
+  }
+
+  table.tableclass td {
+    font-size: 12px; /* Smaller font for phones */
+    padding: 5px; /* Adjust padding */
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 10px; /* Ensures equal spacing across all devices */
+  margin-top: auto; /* Ensures footer is always pushed to the bottom */
+  width: 100%;
+  box-sizing: border-box; /* Includes padding in total width */
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+}
+
+.footer ul li img {
+  height: 30px;
+  width: 30px;
+}
