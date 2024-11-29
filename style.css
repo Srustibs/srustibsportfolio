@@ -1,0 +1,249 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the footer stays at the bottom */
+}
+
+/* Links */
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 30px 20px; /* Increased padding for better spacing */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px; /* Added margin for spacing below header */
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5em;
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Home Section Styles (added background, padding, margin) */
+.home {
+  background: url('./bg-coffee-shop.jpg') no-repeat center center; /* Background image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-attachment: fixed; /* Fixed background for a parallax effect */
+  padding: 60px 20px; /* Padding around content */
+  margin: 0 auto; /* Centers content horizontally */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+  text-align: center; /* Centers text */
+}
+
+.home h1 {
+  font-size: 3em; /* Adjusted header size */
+  margin: 0;
+}
+
+.home p {
+  font-size: 1.2em;
+  margin-top: 15px;
+
+  
+}
+
+/* Resume Section Styles */
+.resume-container {
+  padding: 40px 20px; /* Added padding around the content */
+  margin: 0 auto; /* Center the container horizontally */
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
+}
+
+.resume {
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section {
+  margin: 20px 0;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 5px;
+}
+
+/* Education Table Styles */
+table.tableclass {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table.tableclass th,
+table.tableclass td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Increased padding for better spacing */
+  text-align: center;
+}
+
+table.tableclass th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+table.tableclass tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table.tableclass tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Design for Table (Row-wise Layout on Small Screens) */
+@media (max-width: 768px) {
+  table.tableclass {
+    display: block; /* Table becomes block */
+  }
+
+  table.tableclass thead {
+    display: none; /* Hide table header */
+  }
+
+  table.tableclass tr {
+    display: block; /* Each row becomes a block */
+    margin-bottom: 15px; /* Add spacing between rows */
+    border: 1px solid #ddd;
+    padding: 10px; /* Add padding for clarity */
+  }
+
+  table.tableclass td {
+    display: block; /* Each cell becomes a block */
+    text-align: left; /* Align text to the left */
+    font-size: 14px;
+    padding: 5px 10px;
+    border: none; /* Remove inner borders for clarity */
+  }
+
+  table.tableclass td:before {
+    content: attr(data-label); /* Use data-label attribute for labels */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  table.tableclass tr {
+    margin-bottom: 10px; /* Reduce spacing for smaller screens */
+  }
+
+  table.tableclass td {
+    font-size: 12px; /* Smaller font for phones */
+    padding: 5px; /* Adjust padding */
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 10px; /* Increased padding for better spacing */
+  margin-top: auto; /* Ensures footer is always pushed to the bottom */
+  width: 100%;
+  box-sizing: border-box; /* Includes padding in total width */
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  flex-wrap: wrap; /* Ensures items wrap in case of small screens */
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+footer ul li img {
+  height: 30px;
+  width: 30px;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  footer ul {
+    flex-direction: column; /* Change to column layout on mobile/tablet screens */
+    align-items: center; /* Center the items */
+  }
+
+  footer ul li {
+    margin-bottom: 10px; /* Add spacing between items in column layout */
+  }
+}
+
+@media (min-width: 769px) {
+  footer ul {
+    flex-direction: row; /* Change to row layout on desktop screens */
+    align-items: center; /* Center the items */
+  }
+
+  footer ul li {
+    margin-bottom: 0; /* No margin for row layout */
+  }
+}
+
+/* Additional Responsive Design Improvements */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 2em; /* Adjust header font size for very small screens */
+  }
+
+  header h2 {
+    font-size: 1.2em; /* Adjust subheading font size */
+  }
+
+  .home {
+    padding: 30px 15px; /* Adjust padding for small screens */
+  }
+
+  .resume-container {
+    padding: 15px; /* Reduce padding for small screens */
+  }
+
+  .resume {
+    padding: 20px; /* Adjust padding inside the resume section */
+  }
+
+  .resume-section {
+    padding: 15px; /* Reduce padding inside sections */
+  }
+}
